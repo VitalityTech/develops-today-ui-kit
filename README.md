@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# 🚀 DT UI Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сучасна бібліотека UI-компонентів, розроблена як тестове завдання для **DevelopsToday**. Побудована на базі **React**, **TypeScript** та **Storybook** з акцентом на чистий код та чудовий UX.
 
-Currently, two official plugins are available:
+## ✨ Реалізовані компоненти
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. ⌨️ Smart Input
 
-## React Compiler
+Гнучкий компонент введення з розширеним функціоналом:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Типи:** text, password, number.
+- **Функції:** перемикач видимості пароля (eye icon toggle) та кнопка швидкого очищення (`clearable`).
+- **Storybook:** інтегровано **Addon-Controls** для live-редагування властивостей.
 
-## Expanding the ESLint configuration
+### 2. 🗺️ Sidebar Menu
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Багаторівнева навігація для складних інтерфейсів:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Вкладеність:** повна підтримка багаторівневих підменю (Nested submenus).
+- **Анімація:** плавний slide-in ефект з правого боку.
+- **UX:** закриття при кліку на Overlay (фон).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 3. 🔔 Toast Notification
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Система миттєвих сповіщень:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Типи:** Success, Error, Info.
+- **Поведінка:** автоматичне зникнення через заданий інтервал та анімована поява.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📸 Візуальний огляд (Storybook)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+|         **Smart Input**          |             **Sidebar Menu**              |           **Toast UI**           |
+| :------------------------------: | :---------------------------------------: | :------------------------------: |
+| ![Input](docs/input_preview.png) | ![Sidebar](docs/sidebar_menu_preview.png) | ![Toast](docs/toast_preview.png) |
+
+## 🛠 Технологічний стек
+
+- **React 18** + **Vite**
+- **TypeScript** (сувора типізація)
+- **Storybook 8** (документація компонентів)
+- **CSS Modules** (ізоляція стилів)
+
+## 🚀 Як запустити проєкт
+
+1. **Встановіть залежності:**
+   ```bash
+   npm install
+   ```
